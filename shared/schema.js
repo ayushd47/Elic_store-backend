@@ -1,4 +1,4 @@
-const Joi = require('joi')
+const Joi = require("joi");
 
 const authDataSchema = Joi.object({
   username: Joi.string()
@@ -7,7 +7,7 @@ const authDataSchema = Joi.object({
   password: Joi.string()
     .required()
     .strict()
-})
+});
 
 const userCreateDataSchema = Joi.object({
   UserName: Joi.string()
@@ -22,7 +22,7 @@ const userCreateDataSchema = Joi.object({
   RoleId: Joi.string()
     .required()
     .strict()
-})
+});
 
 const updateCreateDataSchema = Joi.object({
   UserName: Joi.string()
@@ -37,11 +37,11 @@ const updateCreateDataSchema = Joi.object({
   Id: Joi.string()
     .required()
     .strict()
-})
+});
 
 // export the schemas
 module.exports = {
-    '/api/account/login': authDataSchema,
-    '/api/setup/user/create' : userCreateDataSchema,
-    '/api/setup/user/update' : updateCreateDataSchema
-  }
+  "/api/account/login": authDataSchema,
+  "/api/setup/user/create": userCreateDataSchema,
+  "/api/setup/user/update": updateCreateDataSchema
+};

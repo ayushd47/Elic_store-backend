@@ -1,13 +1,11 @@
 const roleService = require("../services/role.service");
 
 module.exports = {
-    getList
+  getList
 };
 function getList(req, res, next) {
-    roleService.getList(function(err,result){
-        if(err)
-            next(err);
-        else 
-            res.json(result);
-    });
+  roleService.getList(function(err, result) {
+    if (err) next(err);
+    else res.json(result);
+  });
 }

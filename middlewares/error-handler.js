@@ -1,8 +1,8 @@
 module.exports = errorHandler;
 
-function errorHandler(err, req, res, next) { 
-  console.log(err); 
-  if(err.sqlMessage != null){    
+function errorHandler(err, req, res, next) {
+  console.log(err);
+  if (err.sqlMessage != null) {
     return res.status(500).json({ message: "My sql error" });
   }
   if (typeof err === "string") {
